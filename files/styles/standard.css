@@ -1,8 +1,10 @@
+/* Allgemeine Einstellungen */
 * {
     margin: 0px;
     box-sizing: border-box;
 }
 
+/* Header */
 header > img {
     width: 100vw;
     height: 500px;
@@ -17,4 +19,13 @@ h1 {
 
 h1 > span {
     color: var(--main_color);
+}
+
+/* Main */
+
+/* Footer */
+footer p {
+    font-family: 'Palanquin';
+    font-size: 18px;
+    color: white;
 }

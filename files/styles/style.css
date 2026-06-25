@@ -67,3 +67,19 @@
 }
 
 /* Main */
+
+/* Footer */
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    padding-top: 72px;
+    padding-bottom: 32px;
+    background-color: var(--main_color);
+}
+
+.foot > div {
+    display: flex;
+    gap: 8px;
+}
