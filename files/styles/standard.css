@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header > img {
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'Palanquin Dark';
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h1 > span {
+    color: var(--main_color);
+}
