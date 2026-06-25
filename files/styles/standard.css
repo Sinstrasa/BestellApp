@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Header */
 header > img {
     width: 100vw;
@@ -21,9 +25,36 @@ h1 > span {
     color: var(--main_color);
 }
 
+h2 {
+    font-family: 'Palanquin';
+    font-size: 24px;
+    font-weight: 700;
+}
+
 /* Main */
+h3 {
+    font-family: 'Palanquin';
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+}
 
 /* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 72px;
+    padding-top: 72px;
+    padding-bottom: 32px;
+    background-color: var(--main_color);
+}
+
+footer > div {
+    display: flex;
+    gap: 8px;
+}
+
 footer p {
     font-family: 'Palanquin';
     font-size: 18px;

@@ -61,25 +61,16 @@
 .subtitle {
     display: flex;
     justify-content: center;
-    font-family: 'Palanquin';
-    font-size: 24px;
-    font-weight: 700;
 }
 
 /* Main */
-
-/* Footer */
-.foot {
+.category {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 72px;
-    padding-top: 72px;
-    padding-bottom: 32px;
+    align-items: end;
+    gap: 28px;
+    margin-top: 80px;
+    margin-bottom: 26px;
+    padding: 0px max(calc(50% - 720px), 160px);
+    height: 60px;
     background-color: var(--main_color);
-}
-
-.foot > div {
-    display: flex;
-    gap: 8px;
 }
