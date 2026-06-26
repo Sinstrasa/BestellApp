@@ -17,7 +17,7 @@
     <script src="scripts/template.js"></script>
     <script src="scripts/script.js"></script>
   </head>
-  <body>
+  <body onload="initialise()">
     <header>
       <!-- Menüleiste -->
       <article class="menu_bar">
@@ -61,22 +61,22 @@
             <img src="/assets/icons/burger-symbol.svg" alt="Burger Icon" />
             <h3>Burger & Sandwiches</h3>
           </section>
-          <section class="menu">
-            <section class="dish">
-              <img src="/assets/images/burger/veggie.png" alt="Veggie Burger" />
-              <section class="explanation">
-                <div class="description">
-                  <h4>Veggie mushroom black burger</h4>
-                  <p>Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
-                </div>
-                <div class="costs">
-                  <p>16,90€</p>
-                  <div>
-                    <button>Add to basket</button>
-                  </div>
-                </div>
-              </section>
-            </section>
+          <section class="menu" id="burgersMenus">
+            
+          </section>
+          <section class="category">
+            <img src="/assets/icons/pizza-symbol.svg" alt="Pizza Icon" />
+            <h3>Pizza (30cm Ø)</h3>
+          </section>
+          <section class="menu" id="pizzasMenus">
+            
+          </section>
+          <section class="category">
+            <img src="/assets/icons/salad-symbol.svg" alt="Salad Icon" />
+            <h3>Salad</h3>
+          </section>
+          <section class="menu" id="saladsMenus">
+            
           </section>
         </article>
     </main>
