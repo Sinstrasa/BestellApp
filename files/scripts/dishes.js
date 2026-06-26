@@ -17,7 +17,7 @@ let dishes = [
         amount: 0,
       },
       {
-        name: "Beef ref burger",
+        name: "Beef red burger",
         ingredients: "Beeg, Cheese, Tomatoes, Lettuce, Onion",
         price: 14.9,
         picture: "/assets/images/burger/beef-red.png",

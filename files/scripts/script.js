@@ -32,17 +32,20 @@ function renderSalad() {
 function addingBurger(index) {
   let buttonRef = document.getElementById("burgerBasket" + index);
   dishes[0].burger[index].amount++;
+  buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
 }
 
 function addingPizza(index) {
   let buttonRef = document.getElementById("pizzaBasket" + index);
   dishes[0].pizza[index].amount++;
+  buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount++}`;
 }
 
 function addingSalad(index) {
   let buttonRef = document.getElementById("saladBasket" + index);
   dishes[0].salad[index].amount++;
+  buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount++}`;
 }
