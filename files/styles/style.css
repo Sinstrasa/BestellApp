@@ -133,5 +133,34 @@
 }
 
 .change_color {
-    color: var(--main_color);
+  color: var(--main_color);
+}
+
+.buy_order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 64px;
+    border: none;
+    border-radius: 60px;
+    font-family: "Palanquin";
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    background-color: var(--main_color);
+}
+
+.total_cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-top: 3px solid white;
+}
+
+.total_cost > p {
+    font-family: "Palanquin";
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
 }

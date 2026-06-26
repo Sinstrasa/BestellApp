@@ -32,6 +32,13 @@ h2 {
 }
 
 /* Main */
+main > div {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0px;
+}
+
 h3 {
   font-family: "Palanquin";
   font-size: 40px;
@@ -56,6 +63,34 @@ button {
   border-radius: 16px;
   background-color: white;
   cursor: pointer;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 430px;
+    height: 800px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: var(--bg_basket);
+}
+
+aside > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px;
+    padding: 60px 32px;
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    font-family: "Palanquin";
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bg_dishes);
 }
 
 /* Footer */
