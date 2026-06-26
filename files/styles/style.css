@@ -1,132 +1,133 @@
 /* Header */
 .menu_bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px max(calc(50% - 720px), 80px);
-    background-color: var(--main_color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px max(calc(50% - 720px), 80px);
+  background-color: var(--main_color);
 }
 
 .restaurant_icon {
-    display: flex;
-    justify-content: center;
-    height: 100px;
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
 
 .restaurant_symbol {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -125px;
-    border-radius: 50%;
-    width: 220px;
-    height: 220px;
-    background-color: var(--bg_dishes);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -125px;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  background-color: var(--bg_dishes);
 }
 
 .restaurant_symbol > img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
 .restaurant_name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
 }
 
 .restaurant_rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 4px;
-    border-radius: 4px;
-    background-color: var(--bg_dishes);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--bg_dishes);
 }
 
 .rating {
-    font-family: 'Palanquin Dark', sans-serif;
-    font-size: 20px;
+  font-family: "Palanquin Dark", sans-serif;
+  font-size: 20px;
 }
 
 .users {
-    font-family: 'Palanquin', sans-serif;
-    font-size: 18px;
+  font-family: "Palanquin", sans-serif;
+  font-size: 18px;
 }
 
 .subtitle {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 /* Main */
 .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 0px max(calc(50% - 720px), 120px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px max(calc(50% - 720px), 120px);
 }
 
 .category {
-    display: flex;
-    align-items: end;
-    gap: 28px;
-    margin-top: 80px;
-    margin-bottom: 26px;
-    padding: 0px max(calc(50% - 720px), 160px);
-    height: 60px;
-    background-color: var(--main_color);
+  display: flex;
+  align-items: end;
+  gap: 28px;
+  margin-top: 80px;
+  margin-bottom: 26px;
+  padding: 0px max(calc(50% - 720px), 160px);
+  height: 60px;
+  background-color: var(--main_color);
 }
 
 .dish {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    width: 715px;
-    border-radius: 12px;
-    background-color: var(--bg_dishes);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 715px;
+  border-radius: 12px;
+  background-color: var(--bg_dishes);
 }
 
-.dish > img{
-    width: 200px;
-    height: 120px;
-    border-radius: 12px;
-    object-fit: cover;
+.dish > img {
+  width: 200px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .explanation {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .explanation p {
-    font-family: 'Palanquin';
+  font-family: "Palanquin";
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 42ch;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 42ch;
 }
 
 .description > p {
-    font-weight: 500;
+  font-weight: 500;
+  line-height: 100%;
 }
 
 .costs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
 }
 
 .costs > p {
-    font-size: 24px;
-    font-weight: 600;
+  font-size: 24px;
+  font-weight: 600;
 }
