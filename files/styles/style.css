@@ -67,6 +67,7 @@
 .main_menu_style {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   align-items: flex-start;
   margin-top: 80px;
 }
@@ -156,6 +157,57 @@
   font-weight: 700;
   color: white;
   background-color: var(--main_color);
+}
+
+.dish_in_basket {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--bg_dishes);
+}
+
+.name_n_amount,
+.costs_n_trash {
+  font-family: "Palanquin";
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.name_n_amount {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.amount {
+  display: flex;
+  align-items: flex-end;
+  gap: 8;
+}
+
+.amount > button {
+  padding-bottom: 0px;
+  background-color: var(--bg_dishes);
+  font-family: "Palanquin";
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.amount > button:hover {
+  color: var(--main_color);
+}
+
+.costs_n_trash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.costs_n_trash > button {
+  background-color: var(--bg_dishes);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .total_cost {
