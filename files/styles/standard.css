@@ -32,9 +32,8 @@ h2 {
 }
 
 /* Main */
-main > div {
+main > div > div {
     display: flex;
-    justify-content: flex-end;
     position: sticky;
     top: 0px;
 }
@@ -71,7 +70,6 @@ aside {
     justify-content: center;
     width: 430px;
     height: 800px;
-    border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: var(--bg_basket);
 }
