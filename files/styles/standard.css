@@ -69,8 +69,7 @@ aside {
   flex-direction: column;
   justify-content: center;
   width: 430px;
-  height: 800px;
-  border-bottom-left-radius: 30px;
+  height: 814px;
   background-color: var(--bg_basket);
 }
 
