@@ -33,9 +33,9 @@ h2 {
 
 /* Main */
 main > div > div {
-    display: flex;
-    position: sticky;
-    top: 0px;
+  display: flex;
+  position: sticky;
+  top: 0px;
 }
 
 h3 {
@@ -65,30 +65,63 @@ button {
 }
 
 aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 430px;
-    height: 800px;
-    border-bottom-left-radius: 30px;
-    background-color: var(--bg_basket);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 430px;
+  height: 800px;
+  border-bottom-left-radius: 30px;
+  background-color: var(--bg_basket);
 }
 
 aside > article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 36px;
-    padding: 60px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+  padding: 60px 32px;
 }
 
 h5 {
-    display: flex;
-    justify-content: center;
-    font-family: "Palanquin";
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--bg_dishes);
+  display: flex;
+  justify-content: center;
+  font-family: "Palanquin";
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--bg_dishes);
+}
+
+dialog {
+  margin: auto;
+  padding: 40px 48px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--bg_basket);
+  color: white;
+}
+
+dialog > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+dialog p {
+  font-family: "Palanquin";
+  font-size: 29px;
+  font-weight: 700;
+}
+
+dialog::backdrop {
+  background-color: rgba(1, 1, 1, 0.25);
+  backdrop-filter: blur(4px);
+}
+
+h6 {
+  font-family: "Palanquin";
+  font-size: 42px;
+  font-weight: 700;
 }
 
 /* Footer */

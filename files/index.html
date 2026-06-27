@@ -66,7 +66,9 @@
                 <p>Total</p>
                 <p>Insert costs here!</p>
               </section>
-              <button class="buy_order">Insert costs here!</button>
+              <button class="buy_order" id="openButton" onclick="openDialog()">
+                Insert costs here!
+              </button>
             </article>
           </aside>
         </div>
@@ -88,6 +90,20 @@
           <section class="menu" id="saladsMenus"></section>
         </article>
       </div>
+      <dialog id="orderConfirmed" onclick="closeDialog()">
+        <article onclick="stopPropagation(event)">
+          <section>
+            <button class="close" id="closeButton" onclick="closeDialog()">
+              X
+            </button>
+          </section>
+          <section class="order_received">
+            <img src="../assets/icons/order-symbol.svg" alt="Car is driving" />
+            <h6>Oder confirmed!</h6>
+            <p>Your food is on the way!</p>
+          </section>
+        </article>
+      </dialog>
     </main>
     <!-- Footer -->
     <footer>

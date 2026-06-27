@@ -1,7 +1,8 @@
+// Initialise
 function initialise() {
   renderDishes();
 }
-
+// Render dishes
 function renderDishes() {
   renderBurger();
   renderPizza();
@@ -29,6 +30,7 @@ function renderSalad() {
   }
 }
 
+// Adding dishes
 function addingBurger(index) {
   let buttonRef = document.getElementById("burgerBasket" + index);
   dishes[0].burger[index].amount++;
@@ -48,4 +50,19 @@ function addingSalad(index) {
   dishes[0].salad[index].amount++;
   buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount++}`;
+}
+
+// Work with dialog
+function openDialog() {
+  let openRef = document.getElementById("orderConfirmed");
+  openRef.showModal();
+}
+
+function closeDialog() {
+  let closeRef = document.getElementById("orderConfirmed");
+  closeRef.close();
+}
+
+function stopPropagation(event) {
+  event.stopPropagation();
 }
