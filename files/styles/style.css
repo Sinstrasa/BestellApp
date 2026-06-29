@@ -72,6 +72,26 @@
   margin-top: 80px;
 }
 
+.empty_basket {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 69px;
+}
+
+.empty_basket > p {
+  text-align: center;
+  font-family: "Palanquin";
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--bg_dishes);
+}
+
+.empty_basket > img {
+  width: 150px;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
