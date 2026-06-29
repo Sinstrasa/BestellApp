@@ -60,31 +60,25 @@ function saladTemplate(index) {
 
 function basketEmptyTemplate() {
   return `
-          <div>
-          <aside>
-            <article>
-              <div class="empty_basket">
-                <h5>Your Basket</h5>
-                <p>
-                  Nothing here yet.<br />
-                  Go ahead and choose something delicious!
-                </p>
-                <img
-                  src="/assets/icons/shopping-cart.svg"
-                  alt="Shopping Cart if Basket is Empty"
-                />
-              </div>
-            </article>
-          </aside>
-        </div>
+          <article>
+            <div class="empty_basket">
+              <h5>Your Basket</h5>
+              <p>
+                Nothing here yet.<br />
+                Go ahead and choose something delicious!
+              </p>
+              <img
+                src="/assets/icons/shopping-cart.svg"
+                alt="Shopping Cart if Basket is Empty"
+              />
+            </div>
+          </article>
           `;
 }
 
 function basketContentTemplate(index) {
   return `
-          <div>
-          <aside>
-            <article>
+          <article>
               <h5>Your Basket</h5>
               <section class="ordered_dishes">
                 <article class="dish_in_basket">
@@ -97,20 +91,24 @@ function basketContentTemplate(index) {
                     </div>
                   </section>
                   <section class="costs_n_trash">
-                    <button onclick="erase()"><img src="../assets/icons/delete.svg" alt="Trash Icon"></button>
+                    <button onclick="erase()">
+                      <img src="../assets/icons/delete.svg" alt="Trash Icon" />
+                    </button>
                     <p>16.9€</p>
                   </section>
                 </article>
               </section>
-              <section class="total_cost">
-                <p>Total</p>
-                <p>Insert costs here!</p>
+              <section class="basket_lower_part">
+                <div class="total_cost">
+                  <p>Total</p>
+                  <p>Insert costs here!</p>
+                </div>
+                <div class="buy_order">
+                  <button class="button_buy_order" id="openButton" onclick="openDialog()">
+                  Insert costs here!
+                  </button>
+                </div>
               </section>
-              <button class="buy_order" id="openButton" onclick="openDialog()">
-                Insert costs here!
-              </button>
             </article>
-          </aside>
-        </div>
           `;
 }

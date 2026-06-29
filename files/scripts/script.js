@@ -1,6 +1,7 @@
 // Initialise
 function initialise() {
   renderDishes();
+  // renderEmptyBasket();
 }
 // Render dishes
 function renderDishes() {
@@ -65,4 +66,15 @@ function closeDialog() {
 
 function stopPropagation(event) {
   event.stopPropagation();
+}
+
+// Render Basket
+function renderEmptyBasket() {
+  let basketRef = document.getElementById("basket");
+  basketRef.innerHTML = basketEmptyTemplate();
+}
+
+function renderFullBasket() {
+  let basketRef = document.getElementById("basket");
+
 }
