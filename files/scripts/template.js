@@ -82,8 +82,6 @@ function basketEmptyTemplate() {
 
 function basketContentTemplate(index) {
   return `
-          <div>
-          <aside>
             <article>
               <h5>Your Basket</h5>
               <section class="ordered_dishes">
@@ -110,7 +108,5 @@ function basketContentTemplate(index) {
                 Insert costs here!
               </button>
             </article>
-          </aside>
-        </div>
           `;
 }
