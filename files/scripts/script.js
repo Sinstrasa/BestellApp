@@ -32,105 +32,25 @@ function renderSalad() {
 }
 
 // Adding dishes
-function changeAmountBurger(index, isPositive) {
+function addingBurger(index) {
   let buttonRef = document.getElementById("burgerBasket" + index);
-  if (isPositive) {
-    dishes[0].burger[index].amount++;
-    buttonRef.classList.add("change_color");
-    buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
-  } else
-    switch (dishes[0].burger[index].amount) {
-      case 0:
-        break;
-      case 1:
-        dishes[0].burger[index].amount--;
-        buttonRef.classList.add("change_color");
-        buttonRef.innerHTML = `Add to basket`;
-        break;
-      default:
-        dishes[0].burger[index].amount--;
-        buttonRef.classList.add("change_color");
-        buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
-        break;
-    }
+  dishes[0].burger[index].amount++;
+  buttonRef.classList.add("change_color");
+  buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
 }
 
-function changeAmountPizza(index, isPositive) {
+function addingPizza(index) {
   let buttonRef = document.getElementById("pizzaBasket" + index);
-  if (isPositive == "+") {
-    dishes[0].pizza[index].amount++;
-    buttonRef.classList.add("change_color");
-    buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount++}`;
-  } else
-    switch (dishes[0].pizza[index].amount) {
-      case 0:
-        break;
-      case 1:
-        dishes[0].pizza[index].amount--;
-        buttonRef.classList.add("change_color");
-        buttonRef.innerHTML = `Add to basket`;
-        break;
-      default:
-        dishes[0].pizza[index].amount--;
-        buttonRef.classList.add("change_color");
-        buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount}`;
-        break;
-    }
+  dishes[0].pizza[index].amount++;
+  buttonRef.classList.add("change_color");
+  buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount++}`;
 }
 
-function changeAmountSalad(index, isPositive) {
+function addingSalad(index) {
   let buttonRef = document.getElementById("saladBasket" + index);
-  if (isPositive == "+") {
-    dishes[0].salad[index].amount++;
-    buttonRef.classList.add("change_color");
-    buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount++}`;
-  } else
-    switch (dishes[0].salad[index].amount) {
-      case 0:
-        break;
-      case 1:
-        dishes[0].salad[index].amount--;
-        buttonRef.classList.add("change_color");
-        buttonRef.innerHTML = `Add to basket`;
-        break;
-      default:
-        dishes[0].salad[index].amount--;
-        buttonRef.classList.add("change_color");
-        buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount}`;
-        break;
-    }
-}
-
-function reduce(category, index) {
-  switch (category) {
-    case burger:
-      changeAmountBurger(index, false);
-      break;
-    case pizza:
-      changeAmountPizza(index, false);
-      break;
-    case salad:
-      changeAmountSalad(index, false);
-      break;
-    default:
-      break;
-  }
-}
-
-function increase(category, index) {
-  switch (category) {
-    case burger:
-      changeAmountBurger(index, true);
-      break;
-    case pizza:
-      changeAmountPizza(index, true);
-      break;
-    case salad:
-      changeAmountSalad(index, true);
-      break;
-    default:
-      break;
-  }
+  dishes[0].salad[index].amount++;
+  buttonRef.classList.add("change_color");
+  buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount++}`;
 }
 
 function erase() {}
