@@ -12,21 +12,21 @@ function renderDishes() {
 
 function renderBurger() {
   let burgerRef = document.getElementById("burgersMenus");
-  for (let index = 0; index < dishes[0].burger.length; index++) {
+  for (let index = 0; index <= 3; index++) {
     burgerRef.innerHTML += burgerTemplate(index);
   }
 }
 
 function renderPizza() {
   let pizzaRef = document.getElementById("pizzasMenus");
-  for (let index = 0; index < dishes[0].pizza.length; index++) {
+  for (let index = 4; index <= 7; index++) {
     pizzaRef.innerHTML += pizzaTemplate(index);
   }
 }
 
 function renderSalad() {
   let saladRef = document.getElementById("saladsMenus");
-  for (let index = 0; index < dishes[0].salad.length; index++) {
+  for (let index = 8; index <= 11; index++) {
     saladRef.innerHTML += saladTemplate(index);
   }
 }
@@ -34,36 +34,36 @@ function renderSalad() {
 // Adding dishes from menu
 function addingBurger(index) {
   let buttonRef = document.getElementById("burgerBasket" + index);
-  if (dishes[0].burger[index].amount == 0) {
-    dishesInBasket.push(dishes[0].burger[index]);
+  if (dishes[index].amount == 0) {
+    dishesInBasket.push(dishes[index]);
   }
-  dishes[0].burger[index].amount++;
+  dishes[index].amount++;
   buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
+  buttonRef.innerHTML = `Added ${dishes[index].amount}`;
   console.log(dishesInBasket);
   isBasketFull();
 }
 
 function addingPizza(index) {
   let buttonRef = document.getElementById("pizzaBasket" + index);
-  if (dishes[0].pizza[index].amount == 0) {
-    dishesInBasket.push(dishes[0].pizza[index]);
+  if (dishes[index].amount == 0) {
+    dishesInBasket.push(dishes[index]);
   }
-  dishes[0].pizza[index].amount++;
+  dishes[index].amount++;
   buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount}`;
+  buttonRef.innerHTML = `Added ${dishes[index].amount}`;
   console.log(dishesInBasket);
   isBasketFull();
 }
 
 function addingSalad(index) {
   let buttonRef = document.getElementById("saladBasket" + index);
-  if (dishes[0].salad[index].amount == 0) {
-    dishesInBasket.push(dishes[0].salad[index]);
+  if (dishes[index].amount == 0) {
+    dishesInBasket.push(dishes[index]);
   }
-  dishes[0].salad[index].amount++;
+  dishes[index].amount++;
   buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount}`;
+  buttonRef.innerHTML = `Added ${dishes[index].amount}`;
   console.log(dishesInBasket);
   isBasketFull();
 }
