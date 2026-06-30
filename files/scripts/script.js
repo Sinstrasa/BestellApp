@@ -1,7 +1,7 @@
 // Initialise
 function initialise() {
   renderDishes();
-  // renderEmptyBasket();
+  isBasketFull();
 }
 // Render dishes
 function renderDishes() {
@@ -31,29 +31,48 @@ function renderSalad() {
   }
 }
 
-// Adding dishes
+// Adding dishes from menu
 function addingBurger(index) {
   let buttonRef = document.getElementById("burgerBasket" + index);
-  dishes[0].burger[index].amount++;
-  buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
+  const exists = false;
+  if (exists) {
+    dishes[0].burger[index].amount++;
+    buttonRef.classList.add("change_color");
+    buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
+  } else {
+    dishesInBasket.push(dishes[0].burger[index]);
+    console.log(dishesInBasket);
+    
+  }
+  isBasketFull();
 }
 
 function addingPizza(index) {
   let buttonRef = document.getElementById("pizzaBasket" + index);
-  dishes[0].pizza[index].amount++;
-  buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount++}`;
+
+  // buttonRef.classList.add("change_color");
+  // buttonRef.innerHTML = `Added ${}`;
 }
 
 function addingSalad(index) {
   let buttonRef = document.getElementById("saladBasket" + index);
-  dishes[0].salad[index].amount++;
-  buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount++}`;
+
+  // buttonRef.classList.add("change_color");
+  // buttonRef.innerHTML = `Added ${}`;
 }
 
-function erase() {}
+// Change amount of dishes in basket
+function increase() {
+  renderFullBasket();
+}
+
+function reduce() {
+  isBasketFull();
+}
+
+function erase() {
+  isBasketFull();
+}
 
 // Work with dialog
 function openDialog() {
@@ -70,12 +89,31 @@ function stopPropagation(event) {
   event.stopPropagation();
 }
 
+// Check state of dishesInBasket
+function isBasketFull() {
+  if (dishesInBasket.length == 0) {
+    renderEmptyBasket();
+  } else {
+    renderFullBasket();
+  }
+}
+
 // Render Basket
 function renderEmptyBasket() {
-  let basketRef = document.getElementById("basket");
-  basketRef.innerHTML = basketEmptyTemplate();
+    let basketRef = document.getElementById("basket");
+    basketRef.innerHTML = basketEmptyTemplate();
 }
 
 function renderFullBasket() {
   let basketRef = document.getElementById("basket");
+  basketRef.innerHTML = basketFullTemplate();
+  renderContentBasket();
+}
+
+function renderContentBasket() {
+  let basketRef = document.getElementById("orderedDishes");
+  basketRef.innerHTML = "";
+  for (let index = 0; index < dishesInBasket.length; index++) {
+    basketRef.innerHTML += basketWithDishes(index);
+  }
 }

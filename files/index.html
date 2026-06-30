@@ -58,44 +58,7 @@
     <main>
       <div class="main_menu_style">
         <div>
-          <aside>
-            <article>
-              <h5>Your Basket</h5>
-              <section class="ordered_dishes">
-                <article class="dish_in_basket">
-                  <section class="name_n_amount">
-                    <p>Veggie mushroom black burger</p>
-                    <div class="amount">
-                      <button onclick="reduce()">-</button>
-                      <p>1</p>
-                      <button onclick="increase()">+</button>
-                    </div>
-                  </section>
-                  <section class="costs_n_trash">
-                    <button onclick="erase()">
-                      <img src="../assets/icons/delete.svg" alt="Trash Icon" />
-                    </button>
-                    <p>16.9€</p>
-                  </section>
-                </article>
-              </section>
-              <section class="lower_part_basket">
-                <div class="total_cost">
-                  <p>Total</p>
-                  <p>Insert costs here!</p>
-                </div>
-                <div>
-                  <button
-                    class="button_buy_order"
-                    id="openButton"
-                    onclick="openDialog()"
-                  >
-                    Insert costs here!
-                  </button>
-                </div>
-              </section>
-            </article>
-          </aside>
+          <aside id="basket"></aside>
         </div>
         <article>
           <section class="category">

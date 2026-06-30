@@ -11,7 +11,7 @@ function burgerTemplate(index) {
                 <div class="costs">
                   <p>${dishes[0].burger[index].price}€</p>
                   <div>
-                    <button id="burgerBasket${+index}" onclick="changeAmountBurger(${index}, ${true})">Add to basket</button>
+                    <button id="burgerBasket${+index}" onclick="addingBurger(${index})">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -31,7 +31,7 @@ function pizzaTemplate(index) {
                 <div class="costs">
                   <p>${dishes[0].pizza[index].price}€</p>
                   <div>
-                    <button id="pizzaBasket${+index}" onclick="changeAmountPizza(${index}, ${true})">Add to basket</button>
+                    <button id="pizzaBasket${+index}" onclick="addingPizza(${index})">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -51,7 +51,7 @@ function saladTemplate(index) {
                 <div class="costs">
                   <p>${dishes[0].salad[index].price}€</p>
                 <div>
-                    <button id="saladBasket${+index}" onclick="changeAmountSalad(${index}, ${true})">Add to basket</button>
+                    <button id="saladBasket${+index}" onclick="addingSalad(${index})">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -60,53 +60,59 @@ function saladTemplate(index) {
 
 function basketEmptyTemplate() {
   return `
-          <div>
-          <aside>
-            <article>
-              <div class="empty_basket">
-                <h5>Your Basket</h5>
-                <p>
-                  Nothing here yet.<br />
-                  Go ahead and choose something delicious!
-                </p>
-                <img
-                  src="/assets/icons/shopping-cart.svg"
-                  alt="Shopping Cart if Basket is Empty"
-                />
-              </div>
-            </article>
-          </aside>
-        </div>
-          `;
+        <article>
+          <div class="empty_basket">
+            <h5>Your Basket</h5>
+            <p>
+              Nothing here yet.<br />
+              Go ahead and choose something delicious!
+            </p>
+            <img
+              src="/assets/icons/shopping-cart.svg"
+              alt="Shopping Cart if Basket is Empty"
+            />
+          </div>
+        </article>
+        `;
 }
 
-function basketContentTemplate(index) {
+function basketFullTemplate() {
   return `
-            <article>
-              <h5>Your Basket</h5>
-              <section class="ordered_dishes">
-                <article class="dish_in_basket">
-                  <section class="name_n_amount">
-                    <p>Veggie mushroom black burger</p>
-                    <div class="amount">
-                      <button onclick="reduce()">-</button>
-                      <p>1</p>
-                      <button onclick="increase()">+</button>
-                    </div>
-                  </section>
-                  <section class="costs_n_trash">
-                    <button onclick="erase()"><img src="../assets/icons/delete.svg" alt="Trash Icon"></button>
-                    <p>16.9€</p>
-                  </section>
-                </article>
-              </section>
-              <section class="total_cost">
-                <p>Total</p>
-                <p>Insert costs here!</p>
-              </section>
-              <button class="buy_order" id="openButton" onclick="openDialog()">
-                Insert costs here!
+        <article>
+          <h5>Your Basket</h5>
+          <section class="ordered_dishes" id="orderedDishes">
+          
+          </section>
+          <section class="basket_lower_part">
+            <div class="total_cost">
+              <p>Total</p>
+              <p>Insert costs here!</p>
+            </div>
+            <div class="buy_order">
+              <button class="button_buy_order" id="openButton" onclick="openDialog()">
+              Insert costs here!
               </button>
+            </div>
+          </section>
+        </article>
+        `;
+}
+
+function basketWithDishes(index) {
+  return  `
+          <article class="dish_in_basket">
+              <section class="name_n_amount">
+                <p>${dishesInBasket[index].name}</p>
+                <div class="amount">
+                  <button onclick="reduce()">-</button>
+                  <p>${dishesInBasket[index].amount}</p>
+                  <button onclick="increase()">+</button>
+                </div>
+              </section>
+              <section class="costs_n_trash">
+                <button onclick="erase()"><img src="../assets/icons/delete.svg" alt="Trash Icon"></button>
+                <p>${dishesInBasket[index].price}€</p>
+              </section>
             </article>
-          `;
+          `
 }

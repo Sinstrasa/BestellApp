@@ -29,7 +29,7 @@ let dishes = [
         price: 15.9,
         picture: "../assets/images/burger/big-chicken.png",
         amount: 0,
-      }
+      },
     ],
     pizza: [
       {
@@ -60,12 +60,13 @@ let dishes = [
         price: 15.9,
         picture: "../assets/images/pizza/formaggi.png",
         amount: 0,
-      }
+      },
     ],
     salad: [
       {
         name: "Warm beef arugula salad",
-        ingredients: "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamico-vinegar dressing",
+        ingredients:
+          "Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamico-vinegar dressing",
         price: 16.9,
         picture: "../assets/images/salad/warm-beef.png",
         amount: 0,
@@ -79,18 +80,24 @@ let dishes = [
       },
       {
         name: "Green Salad with sea food",
-        ingredients: "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimps, Dijon mustard-lemon dressing with dill",
+        ingredients:
+          "Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimps, Dijon mustard-lemon dressing with dill",
         price: 16.9,
         picture: "../assets/images/salad/seafood.png",
         amount: 0,
       },
       {
         name: "Vegan green salad with tofu",
-        ingredients: "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Redishes, Bittercress, Tofu, Peanuts",
+        ingredients:
+          "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Redishes, Bittercress, Tofu, Peanuts",
         price: 14.9,
         picture: "../assets/images/salad/vegan.png",
         amount: 0,
-      }
+      },
     ],
   },
+];
+
+let dishesInBasket = [
+  
 ];
