@@ -11,7 +11,7 @@ function burgerTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                   <div>
-                    <button id="burgerBasket${+index}" onclick="addingBurger(${index})">Add to basket</button>
+                    <button id="burgerBasket${+index}" onclick="increase(${index}, '${dishes[index].category}')">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -31,7 +31,7 @@ function pizzaTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                   <div>
-                    <button id="pizzaBasket${+index}" onclick="addingPizza(${index})">Add to basket</button>
+                    <button id="pizzaBasket${+index}" onclick="increase(${index}, '${dishes[index].category}')">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -51,7 +51,7 @@ function saladTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                 <div>
-                    <button id="saladBasket${+index}" onclick="addingSalad(${index})">Add to basket</button>
+                    <button id="saladBasket${+index}" onclick="increase(${index}, '${dishes[index].category}')">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -104,13 +104,13 @@ function basketWithDishes(index) {
               <section class="name_n_amount">
                 <p>${dishesInBasket[index].name}</p>
                 <div class="amount">
-                  <button id="reduceDish${+index}" onclick="reduce()">-</button>
+                  <button id="reduceDish${+index}" onclick="reduce(${index})">-</button>
                   <p>${dishesInBasket[index].amount}</p>
-                  <button id="increaseDish${+index}" onclick="increase()">+</button>
+                  <button id="increaseDish${+index}" onclick="increase(${index}, '${dishesInBasket[index].category}')">+</button>
                 </div>
               </section>
               <section class="costs_n_trash">
-                <button onclick="erase()"><img src="../assets/icons/delete.svg" alt="Trash Icon"></button>
+                <button onclick="erase(${index})"><img src="../assets/icons/delete.svg" alt="Trash Icon"></button>
                 <p>${dishesInBasket[index].price}€</p>
               </section>
             </article>

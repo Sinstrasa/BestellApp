@@ -69,15 +69,39 @@ function addingSalad(index) {
 }
 
 // Change amount of dishes in basket
-function increase() {
-  renderFullBasket();
+function increase(index, category) {
+  switch (category) {
+    case "burger":
+      addingBurger(index);
+      break;
+    case "pizza":
+      addingPizza(index);
+      break;
+    case "salad":
+      addingSalad(index);
+      break;
+    default:
+      break;
+  }
 }
 
-function reduce() {
-  isBasketFull();
+function reduce(index) {
+  switch (dishesInBasket[index].amount) {
+    case 1:
+      erase(index);
+      break;
+    default:
+      dishesInBasket[index].amount--;
+      let subindex = dishes.findIndex(dish => dish.category == dishesInBasket[index].category);
+      isBasketFull();
+      break;
+  }
 }
 
-function erase() {
+function erase(index) {
+  let subindex = dishes.findIndex(dishesInBasket[index].category);
+  dishes[subindex].amount = 0;
+  dishesInBasket.splice(index, 1);
   isBasketFull();
 }
 
