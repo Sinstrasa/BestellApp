@@ -115,6 +115,7 @@ function renderFullBasket() {
   let basketRef = document.getElementById("basket");
   basketRef.innerHTML = basketFullTemplate();
   renderContentBasket();
+  renderTotalCost();
 }
 
 function renderContentBasket() {
@@ -123,4 +124,21 @@ function renderContentBasket() {
   for (let index = 0; index < dishesInBasket.length; index++) {
     basketRef.innerHTML += basketWithDishes(index);
   }
+}
+
+function renderTotalCost() {
+  let totalRef = document.getElementById("totalCost");
+  let orderRef = document.getElementById("openButton");
+  let total = 0;
+  for (let index = 0; index < dishesInBasket.length; index++) {
+    total += dishesInBasket[index].price * dishesInBasket[index].amount;
+  }
+  total = Math.round(total * 10) / 10;
+  totalRef.innerHTML = `
+                        <p>Total</p>
+                        <p>${total}€</p>
+                        `;
+  orderRef.innerHTML = `
+                        Buy now (${total}€)
+                        `;
 }

@@ -68,7 +68,7 @@ function basketEmptyTemplate() {
               Go ahead and choose something delicious!
             </p>
             <img
-              src="/assets/icons/shopping-cart.svg"
+              src="../assets/icons/shopping-cart.svg"
               alt="Shopping Cart if Basket is Empty"
             />
           </div>
@@ -84,7 +84,7 @@ function basketFullTemplate() {
           
           </section>
           <section class="basket_lower_part">
-            <div class="total_cost">
+            <div class="total_cost" id="totalCost">
               <p>Total</p>
               <p>Insert costs here!</p>
             </div>
@@ -104,9 +104,9 @@ function basketWithDishes(index) {
               <section class="name_n_amount">
                 <p>${dishesInBasket[index].name}</p>
                 <div class="amount">
-                  <button onclick="reduce()">-</button>
+                  <button id="reduceDish${+index}" onclick="reduce()">-</button>
                   <p>${dishesInBasket[index].amount}</p>
-                  <button onclick="increase()">+</button>
+                  <button id="increaseDish${+index}" onclick="increase()">+</button>
                 </div>
               </section>
               <section class="costs_n_trash">
