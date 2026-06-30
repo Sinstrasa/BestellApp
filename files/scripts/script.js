@@ -34,31 +34,38 @@ function renderSalad() {
 // Adding dishes from menu
 function addingBurger(index) {
   let buttonRef = document.getElementById("burgerBasket" + index);
-  const exists = false;
-  if (exists) {
-    dishes[0].burger[index].amount++;
-    buttonRef.classList.add("change_color");
-    buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
-  } else {
+  if (dishes[0].burger[index].amount == 0) {
     dishesInBasket.push(dishes[0].burger[index]);
-    console.log(dishesInBasket);
-    
   }
+  dishes[0].burger[index].amount++;
+  buttonRef.classList.add("change_color");
+  buttonRef.innerHTML = `Added ${dishes[0].burger[index].amount}`;
+  console.log(dishesInBasket);
   isBasketFull();
 }
 
 function addingPizza(index) {
   let buttonRef = document.getElementById("pizzaBasket" + index);
-
-  // buttonRef.classList.add("change_color");
-  // buttonRef.innerHTML = `Added ${}`;
+  if (dishes[0].pizza[index].amount == 0) {
+    dishesInBasket.push(dishes[0].pizza[index]);
+  }
+  dishes[0].pizza[index].amount++;
+  buttonRef.classList.add("change_color");
+  buttonRef.innerHTML = `Added ${dishes[0].pizza[index].amount}`;
+  console.log(dishesInBasket);
+  isBasketFull();
 }
 
 function addingSalad(index) {
   let buttonRef = document.getElementById("saladBasket" + index);
-
-  // buttonRef.classList.add("change_color");
-  // buttonRef.innerHTML = `Added ${}`;
+  if (dishes[0].salad[index].amount == 0) {
+    dishesInBasket.push(dishes[0].salad[index]);
+  }
+  dishes[0].salad[index].amount++;
+  buttonRef.classList.add("change_color");
+  buttonRef.innerHTML = `Added ${dishes[0].salad[index].amount}`;
+  console.log(dishesInBasket);
+  isBasketFull();
 }
 
 // Change amount of dishes in basket
@@ -100,8 +107,8 @@ function isBasketFull() {
 
 // Render Basket
 function renderEmptyBasket() {
-    let basketRef = document.getElementById("basket");
-    basketRef.innerHTML = basketEmptyTemplate();
+  let basketRef = document.getElementById("basket");
+  basketRef.innerHTML = basketEmptyTemplate();
 }
 
 function renderFullBasket() {

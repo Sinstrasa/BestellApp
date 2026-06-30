@@ -169,6 +169,7 @@
   flex-direction: column;
   gap: 10px;
   height: 464px;
+  overflow: auto;
 }
 
 .dish_in_basket {
@@ -189,6 +190,7 @@
 .name_n_amount {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 8px;
 }
 
