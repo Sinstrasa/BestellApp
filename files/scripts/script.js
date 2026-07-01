@@ -71,7 +71,9 @@ function addingSalad(index) {
 // Change amount of dishes in basket
 function increase(index, kindOfDish) {
   if (dishesInBasket.length != 0) {
-    subindex = dishes.findIndex((dish) => dish.name == dishesInBasket[index].name);
+    subindex = dishes.findIndex(
+      (dish) => dish.name == dishesInBasket[index].name,
+    );
   }
   switch (kindOfDish) {
     case "burger":
@@ -123,6 +125,7 @@ function erase(index) {
 
 // Work with dialog
 function openDialog() {
+  orderSent();
   let openRef = document.getElementById("orderConfirmed");
   openRef.showModal();
 }
@@ -134,6 +137,20 @@ function closeDialog() {
 
 function stopPropagation(event) {
   event.stopPropagation();
+}
+
+// Order has been sent
+function orderSent() {
+  dishesInBasket = [];
+  for (let index = 0; index < dishes.length; index++) {
+    dishes[index].amount = 0;
+    let buttonRef = document.getElementById(
+      dishes[index].category + "Basket" + index,
+    );
+    buttonRef.classList.remove("change_color");
+    buttonRef.innerHTML = `Add to basket`;
+  }
+  renderEmptyBasket();
 }
 
 // Check state of dishesInBasket
