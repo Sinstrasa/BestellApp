@@ -27,6 +27,28 @@
   .basket_responsive {
     display: flex;
   }
+
+  aside {
+    width: 320px;
+    height: auto;
+  }
+
+  aside > article {
+    padding: 20px;
+  }
+
+  .empty_basket {
+    gap: 32px;
+  }
+
+  .empty_basket > p {
+    font-size: 16px;
+    width: 20ch;
+  }
+
+  .ordered_dishes {
+    height: 350px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {

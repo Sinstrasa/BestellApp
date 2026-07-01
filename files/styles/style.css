@@ -314,6 +314,13 @@
   background-color: var(--bg_basket);
 }
 
+.basket_dialog {
+  padding: 0px;
+  width: 320px;
+  height: 667px;
+  background-color: var(--bg_basket);
+}
+
 .dialog_offen {
   overflow: hidden;
 }
