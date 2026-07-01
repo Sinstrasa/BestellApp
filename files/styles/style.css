@@ -307,9 +307,13 @@
 .footer_responsive > div {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .responsive_basket {
   background-color: var(--bg_basket);
+}
+
+.dialog_offen {
+  overflow: hidden;
 }

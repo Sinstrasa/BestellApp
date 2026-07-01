@@ -125,6 +125,7 @@ function openDialog() {
   orderSent();
   let openRef = document.getElementById("orderConfirmed");
   openRef.showModal();
+  document.body.classList.toggle("dialog_offen");
 }
 
 function closeDialog() {
@@ -140,6 +141,7 @@ function stopPropagation(event) {
 function openBasket() {
   let openRef = document.getElementById("basketDialog");
   openRef.showModal();
+  document.body.classList.toggle("dialog_offen");
 }
 
 function closeBasket() {
