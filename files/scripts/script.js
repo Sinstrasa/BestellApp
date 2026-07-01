@@ -40,7 +40,6 @@ function addingBurger(index) {
   dishes[index].amount++;
   buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[index].amount}`;
-  console.log(dishesInBasket);
   isBasketFull();
 }
 
@@ -52,7 +51,6 @@ function addingPizza(index) {
   dishes[index].amount++;
   buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[index].amount}`;
-  console.log(dishesInBasket);
   isBasketFull();
 }
 
@@ -64,7 +62,6 @@ function addingSalad(index) {
   dishes[index].amount++;
   buttonRef.classList.add("change_color");
   buttonRef.innerHTML = `Added ${dishes[index].amount}`;
-  console.log(dishesInBasket);
   isBasketFull();
 }
 
