@@ -131,14 +131,3 @@ footer {
   padding-bottom: 32px;
   background-color: var(--main_color);
 }
-
-footer > div {
-  display: flex;
-  gap: 8px;
-}
-
-footer p {
-  font-family: "Palanquin";
-  font-size: 18px;
-  color: white;
-}

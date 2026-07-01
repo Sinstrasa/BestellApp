@@ -270,3 +270,31 @@
   justify-content: center;
   align-items: center;
 }
+
+.footer_classic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+
+.footer_classic > div {
+  display: flex;
+  gap: 8px;
+}
+
+.footer_classic  p {
+  font-family: "Palanquin";
+  font-size: 18px;
+  color: white;
+}
+
+.footer_responsive {
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 24px max(calc(50% - 720px), 140px);
+  position: fixed;
+  bottom: 0px;
+  background-color: var(--bg_basket);
+}
