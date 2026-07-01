@@ -26,7 +26,7 @@
           src="../assets/icons/bestellapp-logo.svg"
           alt="Logo of BestellApp"
         />
-        <img src="../assets/icons/menu-bar.svg" alt="Menu Bar" />
+        <img class="bars" src="../assets/icons/menu-bar.svg" alt="Menu Bar" />
       </article>
       <!-- Herobild -->
       <img
@@ -63,18 +63,24 @@
         </div>
         <article>
           <section class="category">
-            <img src="../assets/icons/burger-symbol.svg" alt="Burger Icon" />
-            <h3>Burger & Sandwiches</h3>
+            <div>
+              <img src="../assets/icons/burger-symbol.svg" alt="Burger Icon" />
+              <h3>Burger & Sandwiches</h3>
+            </div>
           </section>
           <section class="menu" id="burgersMenus"></section>
           <section class="category">
-            <img src="../assets/icons/pizza-symbol.svg" alt="Pizza Icon" />
-            <h3>Pizza (30cm Ø)</h3>
+            <div>
+              <img src="../assets/icons/pizza-symbol.svg" alt="Pizza Icon" />
+              <h3>Pizza (30cm Ø)</h3>
+            </div>
           </section>
           <section class="menu" id="pizzasMenus"></section>
           <section class="category">
-            <img src="../assets/icons/salad-symbol.svg" alt="Salad Icon" />
-            <h3>Salad</h3>
+            <div>
+              <img src="../assets/icons/salad-symbol.svg" alt="Salad Icon" />
+              <h3>Salad</h3>
+            </div>
           </section>
           <section class="menu" id="saladsMenus"></section>
         </article>
@@ -97,15 +103,17 @@
     <!-- Footer -->
     <footer>
       <section class="footer_responsive">
-        <img src="../assets/mobile/home.svg" alt="Home Symbol" />
-        <img src="../assets/mobile/person.svg" alt="Person Symbol" />
-        <img src="../assets/mobile/takeout-dining.svg" alt="Dining Symbol" />
-        <button>
-          <img
-            src="../assets/mobile/shopping-cart.svg"
-            alt="Button for Basket"
-          />
-        </button>
+        <div>
+          <img src="../assets/mobile/home.svg" alt="Home Symbol" />
+          <img src="../assets/mobile/person.svg" alt="Person Symbol" />
+          <img src="../assets/mobile/takeout-dining.svg" alt="Dining Symbol" />
+          <button class="responsive_basket" onclick="openBasket()">
+            <img
+              src="../assets/mobile/shopping-cart.svg"
+              alt="Button for Basket"
+            />
+          </button>
+        </div>
       </section>
       <section class="footer_classic">
         <div>
@@ -115,6 +123,9 @@
         <p><a href="imprint.html"></a>Imprint</p>
         <p>Cookie Preference</p>
       </section>
+      <dialog id="basketDialog" onclick="closeBasket()">
+        <aside id="basketResponsive" onclick="stopPropagation(event)"></aside>
+      </dialog>
     </footer>
   </body>
 </html>

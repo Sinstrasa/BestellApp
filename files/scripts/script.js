@@ -120,7 +120,7 @@ function erase(index) {
   isBasketFull();
 }
 
-// Work with dialog
+// The "Buy now" Dialog
 function openDialog() {
   orderSent();
   let openRef = document.getElementById("orderConfirmed");
@@ -134,6 +134,17 @@ function closeDialog() {
 
 function stopPropagation(event) {
   event.stopPropagation();
+}
+
+// The "Basket" Dialog for Responsiveness
+function openBasket() {
+  let openRef = document.getElementById("basketDialog");
+  openRef.showModal();
+}
+
+function closeBasket() {
+  let closeRef = document.getElementById("basketDialog");
+  closeRef.close();
 }
 
 // Order has been sent
@@ -162,12 +173,16 @@ function isBasketFull() {
 // Render Basket
 function renderEmptyBasket() {
   let basketRef = document.getElementById("basket");
+  let basketRespRef = document.getElementById("basketResponsive");
   basketRef.innerHTML = basketEmptyTemplate();
+  basketRespRef.innerHTML = basketEmptyTemplate();
 }
 
 function renderFullBasket() {
   let basketRef = document.getElementById("basket");
+  let basketRespRef = document.getElementById("basketResponsive");
   basketRef.innerHTML = basketFullTemplate();
+  basketRespRef.innerHTML = basketFullTemplate();
   renderContentBasket();
   renderTotalCost();
 }
