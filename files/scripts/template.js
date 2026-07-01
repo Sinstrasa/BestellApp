@@ -11,7 +11,7 @@ function burgerTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                   <div>
-                    <button id="burgerBasket${+index}" onclick="increase(${index}, '${dishes[index].category}')">Add to basket</button>
+                    <button id="burgerBasket${+index}" onclick="addingBurger(${index})">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -31,7 +31,7 @@ function pizzaTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                   <div>
-                    <button id="pizzaBasket${+index}" onclick="increase(${index}, '${dishes[index].category}')">Add to basket</button>
+                    <button id="pizzaBasket${+index}" onclick="addingPizza(${index})">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -51,7 +51,7 @@ function saladTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                 <div>
-                    <button id="saladBasket${+index}" onclick="increase(${index}, '${dishes[index].category}')">Add to basket</button>
+                    <button id="saladBasket${+index}" onclick="addingSalad(${index})">Add to basket</button>
                   </div>
                 </div>
             </section>

@@ -69,16 +69,19 @@ function addingSalad(index) {
 }
 
 // Change amount of dishes in basket
-function increase(index, category) {
-  switch (category) {
+function increase(index, kindOfDish) {
+  if (dishesInBasket.length != 0) {
+    subindex = dishes.findIndex((dish) => dish.name == dishesInBasket[index].name);
+  }
+  switch (kindOfDish) {
     case "burger":
-      addingBurger(index);
+      addingBurger(subindex);
       break;
     case "pizza":
-      addingPizza(index);
+      addingPizza(subindex);
       break;
     case "salad":
-      addingSalad(index);
+      addingSalad(subindex);
       break;
     default:
       break;
@@ -92,15 +95,28 @@ function reduce(index) {
       break;
     default:
       dishesInBasket[index].amount--;
-      let subindex = dishes.findIndex(dish => dish.category == dishesInBasket[index].category);
+      let subindex = dishes.findIndex(
+        (dish) => dish.name == dishesInBasket[index].name,
+      );
+      let buttonRef = document.getElementById(
+        dishes[subindex].category + "Basket" + subindex,
+      );
+      buttonRef.innerHTML = `Added ${dishes[subindex].amount}`;
       isBasketFull();
       break;
   }
 }
 
 function erase(index) {
-  let subindex = dishes.findIndex(dishesInBasket[index].category);
+  let subindex = dishes.findIndex(
+    (dish) => dish.name == dishesInBasket[index].name,
+  );
   dishes[subindex].amount = 0;
+  let buttonRef = document.getElementById(
+    dishes[subindex].category + "Basket" + subindex,
+  );
+  buttonRef.classList.remove("change_color");
+  buttonRef.innerHTML = `Add to basket`;
   dishesInBasket.splice(index, 1);
   isBasketFull();
 }
