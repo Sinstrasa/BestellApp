@@ -91,19 +91,19 @@ aside > article {
   padding: 60px 32px;
 }
 
-dialog > article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .empty_basket {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 69px;
+}
+
+.empty_basket > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
 }
 
 .empty_basket > p {
@@ -223,11 +223,12 @@ dialog > article {
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
+  line-height: 100%;
 }
 
 .amount {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 8;
 }
 
@@ -295,6 +296,13 @@ dialog > article {
   color: white;
 }
 
+.close_basket {
+  display: none;
+  border: 1px solid white;
+  background-color: var(--bg_basket);
+  color: white;
+}
+
 .order_received {
   display: flex;
   flex-direction: column;
@@ -314,7 +322,7 @@ dialog > article {
   gap: 8px;
 }
 
-.footer_classic  p {
+.footer_classic p {
   font-family: "Palanquin";
   font-size: 18px;
   color: white;
@@ -345,6 +353,19 @@ dialog > article {
   width: 320px;
   height: 667px;
   background-color: var(--bg_basket);
+}
+
+.basket_dialog > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basket_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
 }
 
 .dialog_offen {

@@ -32,30 +32,8 @@ function renderSalad() {
 }
 
 // Adding dishes from menu
-function addingBurger(index) {
-  let buttonRef = document.getElementById("burgerBasket" + index);
-  if (dishes[index].amount == 0) {
-    dishesInBasket.push(dishes[index]);
-  }
-  dishes[index].amount++;
-  buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[index].amount}`;
-  isBasketFull();
-}
-
-function addingPizza(index) {
-  let buttonRef = document.getElementById("pizzaBasket" + index);
-  if (dishes[index].amount == 0) {
-    dishesInBasket.push(dishes[index]);
-  }
-  dishes[index].amount++;
-  buttonRef.classList.add("change_color");
-  buttonRef.innerHTML = `Added ${dishes[index].amount}`;
-  isBasketFull();
-}
-
-function addingSalad(index) {
-  let buttonRef = document.getElementById("saladBasket" + index);
+function addDish(index, kindOfDish) {
+  let buttonRef = document.getElementById(kindOfDish + "Basket" + index);
   if (dishes[index].amount == 0) {
     dishesInBasket.push(dishes[index]);
   }
@@ -72,19 +50,7 @@ function increase(index, kindOfDish) {
       (dish) => dish.name == dishesInBasket[index].name,
     );
   }
-  switch (kindOfDish) {
-    case "burger":
-      addingBurger(subindex);
-      break;
-    case "pizza":
-      addingPizza(subindex);
-      break;
-    case "salad":
-      addingSalad(subindex);
-      break;
-    default:
-      break;
-  }
+  addDish(subindex, kindOfDish);
 }
 
 function reduce(index) {
@@ -124,7 +90,9 @@ function erase(index) {
 function openDialog() {
   orderSent();
   let openRef = document.getElementById("orderConfirmed");
+  let closeRespRef = document.getElementById("basketDialog");
   openRef.showModal();
+  closeRespRef.close();
   document.body.classList.toggle("dialog_offen");
 }
 

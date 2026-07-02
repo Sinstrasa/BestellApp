@@ -11,7 +11,7 @@ function burgerTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                   <div>
-                    <button id="burgerBasket${+index}" onclick="addingBurger(${index})">Add to basket</button>
+                    <button id="burgerBasket${+index}" onclick="addDish(${index}, '${dishes[index].category}')">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -31,7 +31,7 @@ function pizzaTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                   <div>
-                    <button id="pizzaBasket${+index}" onclick="addingPizza(${index})">Add to basket</button>
+                    <button id="pizzaBasket${+index}" onclick="addDish(${index}, '${dishes[index].category}')">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -51,7 +51,7 @@ function saladTemplate(index) {
                 <div class="costs">
                   <p>${dishes[index].price}€</p>
                 <div>
-                    <button id="saladBasket${+index}" onclick="addingSalad(${index})">Add to basket</button>
+                    <button id="saladBasket${+index}" onclick="addDish(${index}, '${dishes[index].category}')">Add to basket</button>
                   </div>
                 </div>
             </section>
@@ -62,13 +62,20 @@ function basketEmptyTemplate() {
   return `
         <article>
           <div class="empty_basket">
-            <h5>Your Basket</h5>
+            <div>
+              <div>
+                <button class="close_basket" id="closeButton" onclick="closeBasket()">
+                X
+                </button>
+              </div>
+              <h5>Your Basket</h5>
+            </div>
             <p>
               Nothing here yet.<br />
               Go ahead and choose something delicious!
             </p>
             <img
-              src="../assets/icons/shopping-cart.svg"
+              src="./assets/icons/shopping-cart.svg"
               alt="Shopping Cart if Basket is Empty"
             />
           </div>
@@ -101,7 +108,14 @@ function basketFullTemplate() {
 function basketDialogTemplate() {
   return `
         <article>
-          <h5>Your Basket</h5>
+          <div class="basket_header">
+              <div>
+                <button class="close_basket" id="closeButton" onclick="closeBasket()">
+                X
+                </button>
+              </div>
+              <h5>Your Basket</h5>
+            </div>
           <section class="ordered_dishes" id="orderedDishesDialog">
           
           </section>
@@ -132,7 +146,7 @@ function basketWithDishes(index) {
                 </div>
               </section>
               <section class="costs_n_trash">
-                <button onclick="erase(${index})"><img src="../assets/icons/delete.svg" alt="Trash Icon"></button>
+                <button onclick="erase(${index})"><img src="./assets/icons/delete.svg" alt="Trash Icon"></button>
                 <p>${dishesInBasket[index].price}€</p>
               </section>
             </article>

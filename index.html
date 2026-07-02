@@ -6,7 +6,7 @@
     <title>BestellApp</title>
     <link
       rel="shortcut icon"
-      href="../assets/mobile/takeout-dining-onpress.svg"
+      href="./assets/mobile/takeout-dining-onpress.svg"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="files/styles/variables.css" />
@@ -21,14 +21,17 @@
   <body onload="initialise()">
     <header>
       <article class="menu_bar">
-        <img src="/assets/icons/bestellapp-logo.svg" alt="Logo of BestellApp" />
-        <img class="bars" src="/assets/icons/menu-bar.svg" alt="Menu Bar" />
+        <img
+          src="./assets/icons/bestellapp-logo.svg"
+          alt="Logo of BestellApp"
+        />
+        <img class="bars" src="./assets/icons/menu-bar.svg" alt="Menu Bar" />
       </article>
-      <img src="/assets/images/header/hero.png" alt="Hero Image with Food" />
+      <img src="./assets/images/header/hero.png" alt="Hero Image with Food" />
       <div class="restaurant_icon">
         <section class="restaurant_symbol">
           <img
-            src="/assets/images/header/restaurant-logo.png"
+            src="./assets/images/header/restaurant-logo.png"
             alt="Icon of BurgerHouse"
           />
         </section>
@@ -36,7 +39,7 @@
       <section class="restaurant_name">
         <h1><span>Burger</span>House</h1>
         <section class="restaurant_rating">
-          <img src="/assets/icons/star.svg" alt="Rating Star" />
+          <img src="./assets/icons/star.svg" alt="Rating Star" />
           <p class="rating"><b>4,1</b></p>
           <p class="users">(317)</p>
         </section>
@@ -54,21 +57,21 @@
         <article>
           <section class="category">
             <div>
-              <img src="/assets/icons/burger-symbol.svg" alt="Burger Icon" />
+              <img src="./assets/icons/burger-symbol.svg" alt="Burger Icon" />
               <h3>Burger & Sandwiches</h3>
             </div>
           </section>
           <section class="menu" id="burgersMenus"></section>
           <section class="category">
             <div>
-              <img src="/assets/icons/pizza-symbol.svg" alt="Pizza Icon" />
+              <img src="./assets/icons/pizza-symbol.svg" alt="Pizza Icon" />
               <h3>Pizza (30cm Ø)</h3>
             </div>
           </section>
           <section class="menu" id="pizzasMenus"></section>
           <section class="category">
             <div>
-              <img src="/assets/icons/salad-symbol.svg" alt="Salad Icon" />
+              <img src="./assets/icons/salad-symbol.svg" alt="Salad Icon" />
               <h3>Salad</h3>
             </div>
           </section>
@@ -83,8 +86,8 @@
             </button>
           </section>
           <section class="order_received">
-            <img src="/assets/icons/order-symbol.svg" alt="Car is driving" />
-            <h6>Oder confirmed!</h6>
+            <img src="./assets/icons/order-symbol.svg" alt="Car is driving" />
+            <h6>Order confirmed!</h6>
             <p>Your food is on the way!</p>
           </section>
         </article>
@@ -93,12 +96,12 @@
     <footer>
       <section class="footer_responsive">
         <div>
-          <img src="/assets/mobile/home.svg" alt="Home Symbol" />
-          <img src="/assets/mobile/person.svg" alt="Person Symbol" />
-          <img src="/assets/mobile/takeout-dining.svg" alt="Dining Symbol" />
+          <img src="./assets/mobile/home.svg" alt="Home Symbol" />
+          <img src="./assets/mobile/person.svg" alt="Person Symbol" />
+          <img src="./assets/mobile/takeout-dining.svg" alt="Dining Symbol" />
           <button class="responsive_basket" onclick="openBasket()">
             <img
-              src="/assets/mobile/shopping-cart.svg"
+              src="./assets/mobile/shopping-cart.svg"
               alt="Button for Basket"
             />
           </button>
@@ -106,18 +109,20 @@
       </section>
       <section class="footer_classic">
         <div>
-          <img src="/assets/icons/copyright.svg" alt="Copyright" />
+          <img src="./assets/icons/copyright.svg" alt="Copyright" />
           <p>2025 BurgerHouse</p>
         </div>
         <a href="https://www.youtube.com/watch?v=N9w1lCZfaWI">Imprint</a>
         <p>Cookie Preference</p>
       </section>
       <dialog class="basket_dialog" id="basketDialog" onclick="closeBasket()">
-        <aside
-          class="basket_responsive"
-          id="basketResponsive"
-          onclick="stopPropagation(event)"
-        ></aside>
+        <article>
+          <aside
+            class="basket_responsive"
+            id="basketResponsive"
+            onclick="stopPropagation(event)"
+          ></aside>
+        </article>
       </dialog>
     </footer>
   </body>

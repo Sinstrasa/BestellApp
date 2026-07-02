@@ -1,6 +1,6 @@
 @media screen and (min-width: 320px) and (max-width: 1385px) {
   .category {
-    width: 100%;
+    width: 98vw;
   }
 
   .menu {
@@ -16,6 +16,10 @@
     display: none;
   }
 
+  .close_basket {
+    display: block;
+  }
+
   .footer_responsive {
     display: block;
   }
@@ -29,12 +33,13 @@
   }
 
   aside {
-    width: 320px;
+    width: 280px;
     height: auto;
   }
 
   aside > article {
-    padding: 20px;
+    padding: 10px;
+    gap: 8px;
   }
 
   .empty_basket {
@@ -47,7 +52,7 @@
   }
 
   .ordered_dishes {
-    height: 350px;
+    height: 310px;
     color: black;
   }
 
@@ -93,7 +98,7 @@
     justify-content: center;
     margin-top: 32px;
     padding: 0px 0px;
-    width: 100%;
+    width: auto;
   }
 
   .category > div {
@@ -116,7 +121,7 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 300px;
+    width: 95vw;
   }
 
   h4 {
@@ -148,5 +153,13 @@
   .footer_classic {
     flex-direction: column;
     gap: 16px;
+  }
+
+  h6 {
+    font-size: 20px;
+  }
+
+  .order_received > p {
+    font-size: 14px;
   }
 }
