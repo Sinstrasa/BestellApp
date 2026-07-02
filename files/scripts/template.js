@@ -98,8 +98,30 @@ function basketFullTemplate() {
         `;
 }
 
+function basketDialogTemplate() {
+  return `
+        <article>
+          <h5>Your Basket</h5>
+          <section class="ordered_dishes" id="orderedDishesDialog">
+          
+          </section>
+          <section class="basket_lower_part">
+            <div class="total_cost" id="totalCostDialog">
+              <p>Total</p>
+              <p>Insert costs here!</p>
+            </div>
+            <div class="buy_order">
+              <button class="button_buy_order" id="openButtonDialog" onclick="openDialog()">
+              Insert costs here!
+              </button>
+            </div>
+          </section>
+        </article>
+        `;
+}
+
 function basketWithDishes(index) {
-  return  `
+  return `
           <article class="dish_in_basket">
               <section class="name_n_amount">
                 <p>${dishesInBasket[index].name}</p>
@@ -114,5 +136,5 @@ function basketWithDishes(index) {
                 <p>${dishesInBasket[index].price}€</p>
               </section>
             </article>
-          `
+          `;
 }

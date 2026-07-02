@@ -2,7 +2,7 @@
   .category {
     width: 100%;
   }
-  
+
   .menu {
     align-items: center;
     padding: 0px;
@@ -48,6 +48,21 @@
 
   .ordered_dishes {
     height: 350px;
+    color: black;
+  }
+
+  .name_n_amount p,
+  .costs_n_trash p {
+    font-size: 22px;
+  }
+
+  .basket_lower_part {
+    width: 250px;
+  }
+
+  .button_buy_order {
+    width: 250px;
+    font-size: 24px;
   }
 }
 

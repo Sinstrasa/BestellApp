@@ -184,22 +184,27 @@ function renderFullBasket() {
   let basketRef = document.getElementById("basket");
   let basketRespRef = document.getElementById("basketResponsive");
   basketRef.innerHTML = basketFullTemplate();
-  basketRespRef.innerHTML = basketFullTemplate();
+  basketRespRef.innerHTML = basketDialogTemplate();
   renderContentBasket();
   renderTotalCost();
 }
 
 function renderContentBasket() {
   let basketRef = document.getElementById("orderedDishes");
+  let basketRespRef = document.getElementById("orderedDishesDialog");
   basketRef.innerHTML = "";
+  basketRespRef.innerHTML = "";
   for (let index = 0; index < dishesInBasket.length; index++) {
     basketRef.innerHTML += basketWithDishes(index);
+    basketRespRef.innerHTML += basketWithDishes(index);
   }
 }
 
 function renderTotalCost() {
   let totalRef = document.getElementById("totalCost");
+  let totalRespRef = document.getElementById("totalCostDialog");
   let orderRef = document.getElementById("openButton");
+  let orderRespRef = document.getElementById("openButtonDialog");
   let total = 0;
   for (let index = 0; index < dishesInBasket.length; index++) {
     total += dishesInBasket[index].price * dishesInBasket[index].amount;
@@ -210,6 +215,13 @@ function renderTotalCost() {
                         <p>${total}€</p>
                         `;
   orderRef.innerHTML = `
+                        Buy now (${total}€)
+                        `;
+  totalRespRef.innerHTML = `
+                        <p>Total</p>
+                        <p>${total}€</p>
+                        `;
+  orderRespRef.innerHTML = `
                         Buy now (${total}€)
                         `;
 }
